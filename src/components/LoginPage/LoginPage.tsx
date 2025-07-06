@@ -37,9 +37,22 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <form onSubmit={handleLogin} className={styles.form}>
-        <h1 className={styles.title}>Login</h1>
+        <h1 className={styles.title}>
+          <div className={styles.logo}>
+          <svg
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C9.243 2 7 4.243 7 7V11H5C4.44772 11 4 11.4477 4 12V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V12C20 11.4477 19.5523 11 19 11H17V7C17 4.243 14.757 2 12 2ZM15 11H9V7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7V11Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>Acesse sua conta</h1>
         {error && <p className={styles.error}>{error}</p>}
         <div className={styles.inputGroup}>
+          
           <label htmlFor="email">Email</label>
           <input
             type="email"

@@ -25,11 +25,16 @@ const LoginPage = () => {
     setIsLoading(false);
   };
 
-  if (isLoggedIn) {
+   if (isLoggedIn) {
     return (
-      <div className={styles.container}>
-        <h1 className={styles.title}>Bem-vindo(a)!</h1>
-        <p>Login realizado com sucesso.</p>
+      <div className={`${styles.container} ${styles.successContainer}`}>
+        <div className={styles.card}>
+          <div className={styles.checkmarkWrapper}>
+            <div className={styles.checkmarkIcon}></div>
+          </div>
+          <h1 className={styles.title}>Bem-vindo(a)!</h1>
+          <p className={styles.successText}>Login realizado com sucesso.</p>
+        </div>
       </div>
     );
   }

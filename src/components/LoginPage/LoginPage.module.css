@@ -127,3 +127,78 @@
   border-radius: 4px;
   background-color: rgba(24, 119, 242, 0.1);
 }
+
+.successContainer {
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--form-background);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  animation: fade-in 0.5s ease-out;
+}
+
+.successText {
+  color: var(--label-color);
+  font-size: 1.125rem;
+  margin-top: -1rem; 
+}
+
+.checkmarkWrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem auto;
+  transform: scale(0);
+  animation: pop-in 0.4s 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.checkmarkIcon {
+  width: 25px;
+  height: 50px;
+  border: solid white;
+  border-width: 0 8px 8px 0;
+  transform: rotate(45deg) scale(0.5);
+  opacity: 0;
+  /* Animação para o check "aparecer" depois do círculo */
+  animation: check-appear 0.3s 0.6s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes check-appear {
+  from {
+    transform: rotate(45deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+}
